@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Produces game-view.exe. Internal C# namespace is still VCDV to avoid
+         touching every file; users never see the namespace. -->
+    <AssemblyName>game-view</AssemblyName>
+    <RootNamespace>VCDV</RootNamespace>
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Product>Game View</Product>
+    <Description>Game View — live video capture device viewer</Description>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- Put the final publish output at bin\Release\publish\ instead of the
+         default bin\Release\<tfm>\<rid>\publish\. Intermediate build outputs
+         stay at their default deep paths. -->
+    <PublishDir>$(MSBuildProjectDirectory)\bin\$(Configuration)\publish\</PublishDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Serilog" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Include="SharpDX" Version="4.2.0" />
+    <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
+    <PackageReference Include="SharpDX.DXGI" Version="4.2.0" />
+    <PackageReference Include="SharpDX.D3DCompiler" Version="4.2.0" />
+    <PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
+    <PackageReference Include="SharpDX.Direct2D1" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Assets\icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Assets\icon.ico" />
+    <None Include="Assets\cog.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
