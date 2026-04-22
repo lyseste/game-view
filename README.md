@@ -31,7 +31,7 @@ Windows SmartScreen may warn about an unsigned executable - click **More info â†
 3. Pick your device from **Video Device**. Pick audio input/output if you want passthrough.
 4. Adjust resolution and frame rate if your device supports more than 1080p60.
 
-Click the cog icon in the top-right, or press  at any time to reopen settings. Changes apply live.
+Click the cog icon in the top-right, or press `Esc` at any time to reopen settings. Changes apply live.
 
 ### Keyboard shortcuts
 
