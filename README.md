@@ -1,6 +1,5 @@
 <h1 align="center">
-  <img src="Assets/icon.ico" alt="Game View icon" height="26">
-  <span>Game View</span>
+  <img src="https://ik.imagekit.io/lyseste/game-view/game-view-logotext-white.png" alt="Game View logo" height="100">
 </h1>
 <p align="center">
 A lightweight Windows viewer for USB video capture devices, designed with video game capture cards in mind. Plug in your device, select it from the list, and the feed appears full-quality in a clean window with optional audio passthrough.
