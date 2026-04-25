@@ -11,12 +11,10 @@ Built for low latency and zero bloat. Just run the app and play from your captur
 
 ## Features
 
-- **GPU-accelerated rendering** via a DXGI flip-model swap chain + D3D11
-- **Audio passthrough** from a capture device to any output, with live volume control
-- **Configurable resolution** (720p / 1080p / 1440p / 4K) and frame rate (30 / 60 / 120 or custom 30â€“240)
-- **Real-time overlays**: view capture FPS and a detailed render-info panel with per-stage latency percentiles
-- **Persistent settings** saved next to the executable
-- **Single-file portable** - unzip and run, no installer
+- **GPU-accelerated rendering** using DXGI and D3D11
+- **Audio passthrough** from a capture device to any output, with volume control
+- **Configurable resolution** supports 720p / 1080p / 1440p / 4K, and frame rates 30 / 60 / 120, or custom 30-240
+- **Real-time overlay** shows FPS and detailed render info
 
 ## Download
 
@@ -31,7 +29,7 @@ Windows SmartScreen may warn about an unsigned executable - click **More info â†
 3. Pick your device from **Video Device**. Pick audio input/output if you want passthrough.
 4. Adjust resolution and frame rate if your device supports more than 1080p60.
 
-Click the cog icon in the top-right, or press `Esc` at any time to reopen settings. Changes apply live.
+Click the icon in the top-right, or press `Esc` at any time to reopen settings.
 
 ### Keyboard shortcuts
 
@@ -39,16 +37,7 @@ Click the cog icon in the top-right, or press `Esc` at any time to reopen settin
 | --- | --- |
 | `Esc` | Toggle settings sidebar |
 | `F11` | Toggle fullscreen |
-| Double-click on video | Toggle fullscreen |
-
-## Logs & settings
-
-Both sit next to the executable:
-
-- `logs\game-view_YYYYMMDD_HHMMSS.log` - rolling per-launch log (last 5 kept)
-- `game-view_settings.json` - persists device, resolution, fps, volume, overlay toggles
-
-If something goes wrong on startup, a `crash.txt` file is written alongside the log.
+| Double-click | Toggle fullscreen |
 
 ## Build
 
